@@ -32,6 +32,16 @@
             <plugin>
                 <groupId>com.github.danielflower.mavenplugins</groupId>
                 <artifactId>multi-module-maven-release-plugin</artifactId>
+                <configuration>
+                    <releaseProfiles>
+                        <releaseProfile>release</releaseProfile>
+                        <releaseProfile>gpg</releaseProfile>
+                    </releaseProfiles>
+                    <goals>
+                        <goal>clean</goal>
+                        <goal>deploy</goal>
+                    </goals>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
