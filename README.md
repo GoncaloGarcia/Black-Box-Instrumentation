@@ -8,24 +8,13 @@ The goal of this instrumentation is to extract the IP address of the black-box's
 
 To build simply execute:
 
-`mvn clean install -Paspectj`
+`mvn clean install`
 
 The compiled JARs in `${project.root}/${module}/target` will include the instrumented driver as a transitive dependency.
 
 # Releasing
 
-This project uses the [Multi-Module Maven Release Plugin](http://danielflower.github.io/multi-module-maven-release-plugin/index.html)
-
-To deploy all changed modules run the following command:
-
-`mvn releaser:release`
-
-This will publish all commited changes since the previous release to the Maven repository and increment the patch version of each changed module.
-
-It's also possible to release a single module at a time:
-
-`mvn releaser:release -DmodulesToRelease=MyModule`
-
+To perform a release simply make a commit containing the keyword [RELEASE] in the description.
 
 # Contributing
 
