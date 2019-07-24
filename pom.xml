@@ -36,7 +36,6 @@
                 <configuration>
                     <releaseProfiles>
                         <releaseProfile>release</releaseProfile>
-                        <releaseProfile>gpg</releaseProfile>
                     </releaseProfiles>
                     <goals>
                         <goal>clean</goal>
