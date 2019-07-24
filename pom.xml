@@ -58,12 +58,6 @@
                         <verbose>true</verbose>
                         <Xlint>ignore</Xlint>
                         <encoding>UTF-8</encoding>
-                        <weaveDependencies>
-                            <weaveDependency>
-                                <groupId>com.rabbitmq</groupId>
-                                <artifactId>amqp-client</artifactId>
-                            </weaveDependency>
-                        </weaveDependencies>
                     </configuration>
                     <executions>
                         <execution>
@@ -79,6 +73,21 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>1.9.2</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jaegertracing</groupId>
+                <artifactId>jaeger-client</artifactId>
+                <version>0.32.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <profiles>
         <profile>

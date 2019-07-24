@@ -33,6 +33,14 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>aspectj-maven-plugin</artifactId>
+                <configuration>
+                    <weaveDependencies>
+                        <weaveDependency>
+                            <groupId>com.datastax.cassandra</groupId>
+                            <artifactId>cassandra-driver-core</artifactId>
+                        </weaveDependency>
+                    </weaveDependencies>
+                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -48,16 +56,13 @@
             <artifactId>cassandra-driver-mapping</artifactId>
             <version>3.0.7</version>
         </dependency>
-
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
-            <version>1.9.2</version>
         </dependency>
         <dependency>
             <groupId>io.jaegertracing</groupId>
             <artifactId>jaeger-client</artifactId>
-            <version>0.32.0</version>
         </dependency>
     </dependencies>
 
