@@ -163,11 +163,14 @@
     </profiles>
 
     <distributionManagement>
-    <repository>
-        <id>dev</id>
-        <name>Local repository</name>
-        <url>file://${user.home}/Documents/Repo</url>
-    </repository>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
     </distributionManagement>
 
 </project>
