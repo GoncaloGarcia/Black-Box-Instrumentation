@@ -14,3 +14,8 @@ jdk:
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 
+deploy:
+  provider: script
+  script: deploy/deploy.sh
+  on:
+    branch: master
