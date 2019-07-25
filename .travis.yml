@@ -8,6 +8,9 @@ branches:
 script:
   - mvn test -B
 
+jdk:
+  - oraclejdk8
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 
